@@ -1,29 +1,4 @@
-class NumMatrix {
-    int[][] bit;
-    int[][] mat;
-    int m, n;
-
-    public NumMatrix(int[][] matrix) {
-        m = matrix.length;
-        n = matrix[0].length;
-
-        bit = new int[m + 1][n + 1];
-        mat = new int[m][n];
-
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                update(i, j, matrix[i][j]);
-            }
-        }
-    }
-
-    public void update(int row, int col, int val) {
-        int diff = val - mat[row][col];
-        mat[row][col] = val;
-
-        for (int i = row + 1; i <= m; i += i & -i) {
-            for (int j = col + 1; j <= n; j += j & -j) {
-                bit[i][j] += diff;
+ diff;
             }
         }
     }
