@@ -1,7 +1,4 @@
-
-class Solution {
-    public List<String> generateAbbreviations(String word) {
-        List<String> list = new ArrayList<>();
+;
         rec(0, 0, "", word, list);
         return list;
     }
