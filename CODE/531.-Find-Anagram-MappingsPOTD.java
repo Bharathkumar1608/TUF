@@ -4,6 +4,9 @@ class Solution {
         int n=nums2.length;
         int[] arr=new int[n];
         for(int i=0;i<nums2.length;i++){
+            if(map.containsKey(nums2[i])){
+                continue;
+            }
             map.put(nums2[i],i);
         }
         for(int i=0;i<n;i++){
