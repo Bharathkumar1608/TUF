@@ -1,20 +1,27 @@
-class Solution {
-    public int LIS(int[] nums) {
-        int n=nums.length;
-        int[] dp=new int[n];
-        int max=1;
-        Arrays.fill(dp,1);
-        for(int i=1;i<n;i++){
-            for(int j=0;j<i;j++){
-                if(nums[i]>nums[j]){
-                    if(dp[j]+1>dp[i]){
-                        dp[i]=dp[j]+1;
-                    }
+int len = 0;
+
+        for(int i = 0; i < n; i++){
+            int low = 0;
+            int high = len;
+
+            while(low < high){
+                int mid = low + (high - low) / 2;
+
+                if(dp[mid] < nums[i]){
+                    low = mid + 1;
+                }
+                else{
+                    high = mid;
                 }
             }
-            max=Math.max(max,dp[i]);
+
+            dp[low] = nums[i];
+
+            if(low == len){
+                len++;
+            }
         }
-        return max;
+
+        return len;
     }
 }
-
