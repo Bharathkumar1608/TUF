@@ -19,6 +19,6 @@ class Solution {
             max=Math.max(max,i-l+1);
         }
        }
-       return max==Integer.MAX_VALUE?0:max;
+       return max==Integer.MIN_VALUE?0:max;
     }
 }
