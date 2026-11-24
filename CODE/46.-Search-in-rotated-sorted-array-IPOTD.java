@@ -8,6 +8,9 @@ class Solution {
                 break;
             }
         }
+        if(ind==0){
+            ind=n;
+        }
         int pos=-1;
         if(nums[0]<=k && k<=nums[ind-1]){
             for(int i=0;i<ind-1;i++){
