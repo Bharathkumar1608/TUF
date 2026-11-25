@@ -12,8 +12,7 @@ class Solution {
 
         while (l <= r) {
             int mid = l + (r - l) / 2;
-
-            int hours = 0;
+            long hours = 0;
 
             for (int i = 0; i < nums.length; i++) {
                 hours += (nums[i] + mid - 1) / mid;
